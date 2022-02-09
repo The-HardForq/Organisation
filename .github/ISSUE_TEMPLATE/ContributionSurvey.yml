@@ -1,0 +1,153 @@
+name: Contribution Survey v.01
+description: A survey to asses contribution by individuals to the DisCo
+title: "year(number)-month(number)-YourName-DisCoName-ContributionSurvey"
+labels: [Contribution Survey]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this Contribution Survey.
+
+# Overview
+  - type: input
+    id: date-joined
+    attributes:
+      label: Date Joined DisCo
+      description: (Month/Day/Year)
+      placeholder: Ex. 08/21/2020
+    validations:
+      required: true
+  - type: input
+    id: hours-worked
+    attributes:
+      label: Hours Worked (This Month)
+    validations:
+      required: true
+  - type: dropdown
+    id: peer-review
+    attributes:
+      label: Contribution Peer Review
+      description: Select team member to review your constributions
+      options:
+        - member a
+        - member b
+        - member c
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "***"
+
+# Teams (Teamworkspaces) contributed to
+  - type: checkboxes
+    id: teams
+    attributes:
+      label: Teams (Teamworkspaces) contributed to
+      options:
+        - label: Website
+        - label: Governance
+        - label: Content & Metaverse
+        - label: Development
+  - type: input
+    id: output
+    attributes:
+      label: Output
+      description: What has been produced, built, or documented etc. 
+      placeholder: Ex. list GitHub issues by #
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "***"
+
+# Intangibles
+  - type: checkboxes
+    id: intangibles
+    attributes:
+      label: Intangibles
+      options:
+        - label: Greeting new members
+        - label: Mentoring
+        - label: Social / Emotional Support
+        - label: Communicating news and ideas in Discord
+  - type: input
+    id: intangible-output
+    attributes:
+      label: (felt) Output
+      description: What output was felt?
+    validations:
+      required: false
+
+
+  - type: markdown
+    attributes:
+      value: "***"
+
+# Team external work
+  - type: input
+    id: external-work
+    attributes:
+      label: Team External Work
+      description: All items that are not within Teamspaces
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "***"
+
+# Cost & Remuneration Calculation
+  - type: markdown
+    attributes:
+      value: "## Cost & Remuneration Calculation"
+  - type: input
+    id: hours-worked-calc
+    attributes:
+      label: Hours Worked (This Month)
+      placeholder: Ex. 42h
+    validations:
+      required: true
+  - type: input
+    id: amount-livelihood
+    attributes:
+      label: how much % of your work is to support livelihood
+      placeholder: Ex. 75%
+    validations:
+      required: true    
+  - type: input
+    id: hourly-rate-calc
+    attributes:
+      label: Local Hourly Rate (USD)
+      placeholder: Ex. 55/h
+    validations:
+      required: true
+  - type: textarea
+    id: other-expenses-calc
+    attributes:
+      label: Other Expenses (USD)
+      description: Please attach invoices
+    validations:
+      required: false
+  - type: input
+    id: total-costs
+    attributes:
+      label: Total Costs
+      description: (hours worked * local hourly rate) + other expenses
+    validations:
+      required: true
+  - type: input
+    id: exchange-rate
+    attributes:
+      label: ADA/USD Exchange Rate
+      description: Calculated shortly before Remuneration Event
+    validations:
+      required: false
+  - type: input
+    id: total-remunerations
+    attributes:
+      label: Total Remunerations (ADA)
+      description: Total Costs / ADAEUR exchange rate
+    validations:
+      required: false
